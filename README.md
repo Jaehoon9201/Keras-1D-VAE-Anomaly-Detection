@@ -15,6 +15,16 @@ If you run this code, you could get a similar result below one.
 
 ### AUROC(area under the receiver operating characteristic)
 ![KakaoTalk_20210510_175817096](https://user-images.githubusercontent.com/71545160/117639276-b6943180-b1be-11eb-9ad4-4f04d18c3e34.png)
+If you want to extract the results of AUROC, activate the below code. And then, you could get the fpr, tpr, and threshold as **.csv** format file.
+```python
+fpr = fpr.reshape(-1, 1)
+tpr = tpr.reshape(-1, 1)
+thresholds = thresholds.reshape(-1, 1)
+print(tpr.shape)
+fpr_tpr_thre = np.append(fpr, tpr, axis = 1)
+fpr_tpr_thre = np.append(fpr_tpr_thre, thresholds, axis = 1)
+# np.savetxt('fpr_tpr_thre.csv',fpr_tpr_thre,delimiter=",")
+```
 
 ## If you want to see a change in the results
 You can change the following settings if you want to see a change in the results.
