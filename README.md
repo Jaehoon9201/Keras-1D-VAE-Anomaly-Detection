@@ -24,4 +24,5 @@ xent_loss = original_dim * metrics.binary_crossentropy(x, x_decoded_mean)
 kl_loss = - 0.5 * K.sum(1 + z_log_var - K.square(z_mean) - K.exp(z_log_var), axis=-1)
 vae_loss = K.mean(0.5* xent_loss + 0.5*kl_loss)
 ```
-On the above code, vae_loss 
+On the above code, the VAE loss consists of the sum of the binary cross entropy and the kullback divergence loss at a ratio of 0.5 each. The distribution of the latent space significantly can be changed by fixing the ratio.
+The distribution results on the latent space according to the ratio can be found at the following site.[Ref3](https://www.jeremyjordan.me/variational-autoencoders/)
