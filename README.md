@@ -1,5 +1,5 @@
 ## Keras-1D-VAE-Anomaly-Detection
-This code is based on the code from the following three sites.
+This code is based on the code from the following two sites.
 
 [Reference 1](https://keras.io/getting_started/intro_to_keras_for_researchers/) / 
 [Reference 2](https://www.linkedin.com/pulse/supervised-variational-autoencoder-code-included-ibrahim-sobh-phd)
